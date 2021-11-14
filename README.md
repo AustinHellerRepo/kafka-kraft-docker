@@ -13,4 +13,4 @@ For more information about the Kafka running in KRaft mode check out the [introd
 docker run -p 9092:9092 -d bashj79/kafka-kraft
 ```
 
-Check out [Docker Hub](https://registry.hub.docker.com/r/bashj79/kafka-kraft) for further details.
+Check out [Docker Hub](https://hub.docker.com/repository/docker/austinhellerrepo/kafka-kraft) for further details.

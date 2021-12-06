@@ -10,8 +10,8 @@ RUN apk update \
 FROM alpine:3.14
 RUN apk update && apk add --no-cache bash openjdk8-jre
 COPY --from=builder /opt/kafka /opt/kafka
-COPY ./config/server.properties /opt/kafka/config/server.properties
-COPY ./config/consumer.properties /opt/kafka/config/consumer.properties
-COPY ./config/producer.properties /opt/kafka/config/producer.properties
+COPY ./config/broker.properties /opt/kafka/config/kraft/broker.properties
+COPY ./config/controller.properties /opt/kafka/config/kraft/controller.properties
+COPY ./config/server.properties /opt/kafka/config/kraft/server.properties
 COPY start_kafka.sh /bin/
 CMD [ "/bin/start_kafka.sh" ]
